@@ -1,11 +1,12 @@
-#!/usr/bin/bash
+#! /usr/bin/bash
 # current directory
-path='C:\aliases/'
-
+path="C:\aliases"
 # creating vite app
 npm create vite@latest . -- --template react
-
-bash $path/tailwindSetup.sh
-bash $path/reactRouterSetup.sh
+npm i
+bash $path/create-folders.sh
+bash $path/setup-tailwind.sh
+bash $path/setup-react-router.sh
+bash $path/setup-redux.sh
 
 npm run dev

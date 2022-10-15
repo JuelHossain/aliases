@@ -1,8 +1,8 @@
-#!/usr/bin/bash
+#! /usr/bin/bash
 
 # creating gitignore and readme file
 touch .gitignore readme.md
-echo -e "node_modules \n.env \ndist" >.gitignore
+echo -e "node_modules \n.env" >>.gitignore
 echo -e "# Welcome to my new project" >readme.md
 
 # initializing git in the project

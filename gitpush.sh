@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#! /usr/bin/bash
 
 git add .
 message=$1

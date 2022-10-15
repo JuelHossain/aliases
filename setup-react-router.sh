@@ -1,8 +1,7 @@
-#!/usr/bin/bash
+#! /usr/bin/bash
 
 npm install react-router-dom localforage match-sorter sort-by
 
-touch src/router.jsx
 
 # modifiying main.jsx file
 echo '
@@ -11,10 +10,14 @@ import ReactDOM from "react-dom/client";
 import router from "./router"
 import "./index.css";
 import { RouterProvider } from "react-router";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );' >src/main.jsx
 
@@ -36,8 +39,7 @@ const router = createBrowserRouter([
 ]);
 export default router;' >src/router.jsx
 
-mkdir src/pages
-mkdir src/pages/errors
+
 echo '
 import { useRouteError } from "react-router-dom";
 
